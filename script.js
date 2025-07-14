@@ -7,9 +7,18 @@ function calculateAge() {
     document.getElementById('ageResult').textContent = "❗ Please enter a valid birthdate.";
     return;
   }
+  const today = new Date();
 
   const birthDate = new Date(year, month, day);
-  const today = new Date();
+if (
+  birthDate.getFullYear() !== year ||
+  birthDate.getMonth() !== month ||
+  birthDate.getDate() !== day
+) {
+  document.getElementById('ageResult').textContent = "❗ Invalid date entered.";
+  return;
+}
+
 
   let years = today.getFullYear() - birthDate.getFullYear();
   let months = today.getMonth() - birthDate.getMonth();
