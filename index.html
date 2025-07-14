@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Age Calculator</title>
+  <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-cover bg-center flex items-center justify-center min-h-screen text-white" style="background-image: url('./bg.jpg')">
+
+  <div class="bg-white/30  border border-white/40 p-6 rounded-xl shadow-md w-full max-w-md hover:shadow-2xl ">
+    <h2 class="text-2xl font-bold mb-4 text-center">Your Age Calculator</h2>
+
+    <label class="block mb-2 font-bold">Birth Year:</label>
+    <input type="number" id="year" class="w-full bg-white/30 backdrop-blur-xs border border-white/40 mb-4 p-2 border rounded bg-opacity-25" placeholder="e.g. 1995">
+
+    <label class="block mb-2 font-bold">Birth Month:</label>
+    <input type="number" id="month" class="bg-white/30 backdrop-blur-xs border border-white/40 w-full mb-4 p-2 border rounded" min="1" max="12" placeholder="1-12">
+
+    <label class="block mb-2 font-bold">Birth Day:</label>
+    <input type="number" id="day" class="w-full bg-white/30 backdrop-blur-xs border border-white/40 mb-4 p-2 border rounded" min="1" max="31" placeholder="1-31">
+
+    <button onclick="calculateAge()" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 hover:cursor-pointer font-bold">
+      Calculate Age
+    </button>
+
+    <p id="ageResult" class="mt-4 text-lg text-center text-white font-semibold backdrop-blur-xs border border-white/40 p-2 rounded-xl"></p>
+  </div>
+</body>
+</html>
